@@ -1,0 +1,5 @@
+az login
+az acr login --name cgacraksnonprd
+
+docker build . -f Dockerfile -t cgacraksnonprd.azurecr.io/fms/luigi:0.0.4-dev
+docker push cgacraksnonprd.azurecr.io/fms/luigi:0.0.4-dev
